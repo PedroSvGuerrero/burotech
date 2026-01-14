@@ -162,6 +162,75 @@ h2 a:hover {
     border-left-color: var(--accent);
 }
 
+/* Services Page Specific Styles */
+#services-intro {
+    padding: 3rem 0 2rem;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+#services-list {
+    padding: 2rem 0;
+    border: none;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--accent);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 1.0625rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p:last-child {
+    margin-bottom: 0;
+}
+
+.service-note {
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contact-intro {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Contact Section */
 .contact {
     background: var(--white);
