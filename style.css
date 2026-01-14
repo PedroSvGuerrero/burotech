@@ -36,9 +36,12 @@ header {
 .logo {
     display: block;
     margin: 0 auto 1.5rem;
-    max-width: 120px;
+    max-width: 180px;
     height: auto;
     transition: transform 0.3s ease;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .logo:hover {
