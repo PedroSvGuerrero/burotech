@@ -38,6 +38,13 @@
             margin: 0 auto;
         }
 
+        header .logo {
+            display: block;        /* Makes the image behave like a block element */
+            margin: 0 auto 20px;   /* Centers it horizontally and adds bottom spacing */
+            max-width: 40%;        /* Adjust size relative to screen width */
+            height: auto;          /* Keeps aspect ratio */
+        }
+
         section {
             padding: 60px 20px;
             max-width: 1000px;
@@ -107,7 +114,7 @@
 </header>
 
 <section id="about">
-        <img src="burotech-logo.png" alt="BuroTech Logo" style="max-width: 200px;">
+    <img src="burotech-logo.png" alt="BuroTech Logo" class="logo">
     <h2>About Us</h2>
     <p>BuroTech provides authorized, non-legal support for document preparation, compliance, and workflow management. We help clients navigate complex bureaucracy efficiently using structured processes and technology-driven systems.</p>
 </section>
