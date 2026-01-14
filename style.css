@@ -292,6 +292,43 @@ h2 a:active {
     margin-right: auto;
 }
 
+/* Contact Section */
+.contact {
+    background: var(--white);
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    font-size: 1.125rem;
+    color: var(--text-light);
+}
+
+.contact-item a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--secondary);
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    background: var(--secondary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
 /* About Page Specific Styles */
 #about-mission {
     padding: 3rem 0 2rem;
@@ -447,6 +484,8 @@ h2 a:active {
     font-size: 1.125rem;
     margin-bottom: 0.75rem;
     font-weight: 600;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-detail a {
@@ -600,43 +639,6 @@ h2 a:active {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Contact Section */
-.contact {
-    background: var(--white);
-    text-align: center;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.contact-item {
-    font-size: 1.125rem;
-    color: var(--text-light);
-}
-
-.contact-item a {
-    color: var(--secondary);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border: 2px solid var(--secondary);
-    border-radius: 6px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-.contact-item a:hover {
-    background: var(--secondary);
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
 }
 
 /* Footer */
