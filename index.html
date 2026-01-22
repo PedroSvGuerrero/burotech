@@ -19,7 +19,14 @@
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><div id="google_translate_element"></div></li>
+                <li class="language-switcher">
+                    <a href="#" onclick="translateToSpanish(); return false;" class="lang-btn" id="es-btn">
+                        🇪🇸 Español
+                    </a>
+                    <a href="#" onclick="translateToEnglish(); return false;" class="lang-btn" id="en-btn">
+                        🇺🇸 English
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -110,7 +117,7 @@
         </section>
 
         <section id="stats-home">
-            <h2>Founder's Experience</h2>
+            <h2>Trusted by Clients Nationwide</h2>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">500+</div>
@@ -118,11 +125,11 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">700+</div>
-                    <div class="stat-label">Documents Drafted for Administrative Agencies</div>
+                    <div class="stat-label">Documents Drafted</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years of Experience in the interesection of Administration and Law</div>
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">100%</div>
@@ -149,11 +156,41 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'es,en,fr,de,pt,zh-CN,ar,ru',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                includedLanguages: 'es,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
             }, 'google_translate_element');
         }
+
+        function translateToSpanish() {
+            var selectElement = document.querySelector('.goog-te-combo');
+            if (selectElement) {
+                selectElement.value = 'es';
+                selectElement.dispatchEvent(new Event('change'));
+            }
+        }
+
+        function translateToEnglish() {
+            var selectElement = document.querySelector('.goog-te-combo');
+            if (selectElement) {
+                selectElement.value = 'en';
+                selectElement.dispatchEvent(new Event('change'));
+            }
+        }
+
+        // Auto-translate to Spanish on page load
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var selectElement = document.querySelector('.goog-te-combo');
+                if (selectElement && selectElement.value === '') {
+                    translateToSpanish();
+                }
+            }, 1000);
+        });
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Hidden Google Translate element -->
+    <div id="google_translate_element" style="display: none;"></div>
 </body>
 </html>
