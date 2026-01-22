@@ -19,6 +19,7 @@
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><div id="google_translate_element"></div></li>
             </ul>
         </div>
     </nav>
@@ -38,41 +39,41 @@
         <section id="home-services">
             <h2>Our Services</h2>
             <div class="contact-grid">
-                <div class="contact-method-card">
+                <a href="services.html#immigration" class="contact-method-card service-link">
                     <div class="contact-icon">📄</div>
                     <h3>Immigration & Form Preparation</h3>
                     <p class="contact-description">Expert assistance with visa applications, employment petitions, and business documentation.</p>
-                </div>
+                </a>
 
-                <div class="contact-method-card">
+                <a href="services.html#translation" class="contact-method-card service-link">
                     <div class="contact-icon">🌐</div>
                     <h3>Translation Services</h3>
                     <p class="contact-description">Professional English ↔ Spanish translation for documents and communications.</p>
-                </div>
+                </a>
 
-                <div class="contact-method-card">
+                <a href="services.html#interpretation" class="contact-method-card service-link">
                     <div class="contact-icon">🗣️</div>
                     <h3>Interpretation</h3>
                     <p class="contact-description">Real-time language interpretation for meetings and administrative appointments.</p>
-                </div>
+                </a>
 
-                <div class="contact-method-card">
+                <a href="services.html#notary" class="contact-method-card service-link">
                     <div class="contact-icon">✍️</div>
                     <h3>Notary Services</h3>
                     <p class="contact-description">Authorized notarization of documents as certified by U.S. notary law.</p>
-                </div>
+                </a>
 
-                <div class="contact-method-card">
+                <a href="services.html#organization" class="contact-method-card service-link">
                     <div class="contact-icon">📊</div>
                     <h3>Document Organization</h3>
                     <p class="contact-description">Structured filing systems and workflow management using digital tools.</p>
-                </div>
+                </a>
 
-                <div class="contact-method-card">
+                <a href="services.html#optimization" class="contact-method-card service-link">
                     <div class="contact-icon">⚡</div>
                     <h3>Process Optimization</h3>
                     <p class="contact-description">Analysis and improvement of administrative workflows for efficiency.</p>
-                </div>
+                </a>
             </div>
             <div class="section-cta">
                 <a href="services.html" class="cta-button">View Detailed Services</a>
@@ -109,7 +110,7 @@
         </section>
 
         <section id="stats-home">
-            <h2>Trusted by Clients Nationwide</h2>
+            <h2>Founder's Experience</h2>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">500+</div>
@@ -117,11 +118,11 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">700+</div>
-                    <div class="stat-label">Documents Drafted</div>
+                    <div class="stat-label">Documents Drafted for Administrative Agencies</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">7+</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years of Experience in the interesection of Administration and Law</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">100%</div>
@@ -143,5 +144,16 @@
     <footer>
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
     </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,en,fr,de,pt,zh-CN,ar,ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
