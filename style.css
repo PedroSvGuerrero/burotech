@@ -77,6 +77,47 @@ body {
     border-bottom-color: var(--secondary);
 }
 
+/* Google Translate Widget */
+#google_translate_element {
+    display: inline-block;
+}
+
+.goog-te-gadget {
+    font-family: inherit !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: 2px solid var(--secondary) !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    color: var(--text-dark) !important;
+    transition: all 0.3s ease !important;
+}
+
+.goog-te-gadget-simple:hover {
+    background-color: var(--secondary) !important;
+    color: var(--white) !important;
+}
+
+.goog-te-gadget-icon {
+    display: none !important;
+}
+
+.goog-te-menu-value span {
+    color: inherit !important;
+}
+
+/* Hide Google Translate banner */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
 /* Header Styles */
 header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -925,6 +966,64 @@ h2 a:active {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-top-color: var(--accent);
+}
+
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-link:hover h3 {
+    color: var(--accent);
+}
+
+.service-card-detail {
+    background: var(--white);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.service-card-detail:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--accent);
+}
+
+.service-icon-large {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card-detail h3 {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.service-card-detail p {
+    font-size: 1.0625rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.service-card-detail p:last-child {
+    margin-bottom: 0;
+}
+
+#cta-services {
+    padding: 4rem 0;
+    text-align: center;
+    background: var(--bg-light);
+    margin: 2rem -2rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .contact-icon {
