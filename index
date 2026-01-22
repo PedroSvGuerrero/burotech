@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BuroTech streamlines administrative and regulatory processes with efficient, technology-driven support.">
+    <title>BuroTech - Home</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="burotech-logo.png" alt="BuroTech Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <img src="burotech-logo.png" alt="BuroTech Logo" class="header-logo">
+        <h1>BuroTech</h1>
+        <p>Professional Administrative Solutions for Individuals and Organizations</p>
+    </header>
+
+    <main>
+        <section id="hero-intro">
+            <h2>Streamlining Complex Processes</h2>
+            <p class="intro-text">We provide technology-driven administrative support to help you navigate immigration documentation, regulatory compliance, and process optimization with confidence and efficiency.</p>
+        </section>
+
+        <section id="home-services">
+            <h2>Our Services</h2>
+            <div class="contact-grid">
+                <a href="services.html#immigration" class="contact-method-card service-link">
+                    <div class="contact-icon">📄</div>
+                    <h3>Immigration & Form Preparation</h3>
+                    <p class="contact-description">Expert assistance with visa applications, employment petitions, and business documentation.</p>
+                </a>
+
+                <a href="services.html#translation" class="contact-method-card service-link">
+                    <div class="contact-icon">🌐</div>
+                    <h3>Translation Services</h3>
+                    <p class="contact-description">Professional English ↔ Spanish translation for documents and communications.</p>
+                </a>
+
+                <a href="services.html#interpretation" class="contact-method-card service-link">
+                    <div class="contact-icon">🗣️</div>
+                    <h3>Interpretation</h3>
+                    <p class="contact-description">Real-time language interpretation for meetings and administrative appointments.</p>
+                </a>
+
+                <a href="services.html#notary" class="contact-method-card service-link">
+                    <div class="contact-icon">✍️</div>
+                    <h3>Notary Services</h3>
+                    <p class="contact-description">Authorized notarization of documents as certified by U.S. notary law.</p>
+                </a>
+
+                <a href="services.html#organization" class="contact-method-card service-link">
+                    <div class="contact-icon">📊</div>
+                    <h3>Document Organization</h3>
+                    <p class="contact-description">Structured filing systems and workflow management using digital tools.</p>
+                </a>
+
+                <a href="services.html#optimization" class="contact-method-card service-link">
+                    <div class="contact-icon">⚡</div>
+                    <h3>Process Optimization</h3>
+                    <p class="contact-description">Analysis and improvement of administrative workflows for efficiency.</p>
+                </a>
+            </div>
+            <div class="section-cta">
+                <a href="services.html" class="cta-button">View Detailed Services</a>
+            </div>
+        </section>
+
+        <section id="why-choose-home">
+            <h2>Why Choose BuroTech</h2>
+            <div class="contact-grid">
+                <div class="contact-method-card">
+                    <div class="contact-icon">🎯</div>
+                    <h3>Expert Guidance</h3>
+                    <p class="contact-description">10+ years of specialized legal, immigration and regulatory experience.</p>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>Professional Standards</h3>
+                    <p class="contact-description">Meticulous attention to detail and compliance requirements.</p>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="contact-icon">🌍</div>
+                    <h3>Bilingual Support</h3>
+                    <p class="contact-description">Comprehensive services in English and Spanish.</p>
+                </div>
+
+                <div class="contact-method-card">
+                    <div class="contact-icon">⚙️</div>
+                    <h3>Technology-Driven</h3>
+                    <p class="contact-description">Modern tools and systems for organized, efficient processes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats-home">
+            <h2>Trusted by Clients Nationwide</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Cases Analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">700+</div>
+                    <div class="stat-label">Documents Drafted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Committed</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-home">
+            <h2>Ready to Get Started?</h2>
+            <p class="intro-text">Let's discuss how BuroTech can help streamline your administrative processes with professional, organized support.</p>
+            <div class="cta-buttons-home">
+                <a href="contact.html" class="cta-button">Contact Us</a>
+                <a href="about.html" class="cta-button-secondary">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
