@@ -11,78 +11,74 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="home.html" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="burotech-logo.png" alt="BuroTech Logo">
             </a>
             <ul class="nav-menu">
-                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link active">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="language-switcher">
-                    <a href="#" onclick="translateToSpanish(); return false;" class="lang-btn" id="es-btn">
-                        🇪🇸 Español
-                    </a>
-                    <a href="#" onclick="translateToEnglish(); return false;" class="lang-btn" id="en-btn">
-                        🇺🇸 English
-                    </a>
-                </li>
             </ul>
         </div>
     </nav>
 
     <header>
-        <h1>BuroTech</h1>
-        <p>Our services include document preparation, translations, interpretations, and administrative process organization.</p>
+        <h1>Our Services</h1>
+        <p>Comprehensive administrative support designed to simplify complex processes and ensure accuracy at every step.</p>
     </header>
 
     <main>
         <section id="services-intro">
-            <h2>Our Services</h2>
-            <p class="intro-text">We provide comprehensive administrative support services designed to simplify complex processes and ensure accuracy at every step. Our technology-driven approach helps individuals and organizations navigate bureaucratic requirements with confidence.</p>
+            <h2>Professional Administrative Solutions</h2>
+            <p class="intro-text">We provide technology-driven support to help individuals and organizations navigate bureaucratic requirements with confidence and efficiency.</p>
         </section>
 
         <section id="services-list">
-            <div class="service-card">
+            <div class="service-card-detail" id="immigration">
+                <div class="service-icon-large">📄</div>
                 <h3>Immigration & Company Form Preparation</h3>
                 <p>We assist with preparing and organizing visa applications, employment-related petitions, and business documentation. Our services include compiling required evidence, organizing supporting materials, and guiding clients through procedural steps.</p>
                 <p class="service-note">Note: We provide administrative support only and do not offer legal advice.</p>
             </div>
 
-            <div class="service-card">
-                <h3>Document Organization & Workflow Management</h3>
-                <p>We create structured filing systems, comprehensive checklists, and process tracking solutions using Excel and digital tools. Our approach ensures all documents are complete, accurate, and easily accessible throughout your administrative processes.</p>
-            </div>
-
-            <div class="service-card">
+            <div class="service-card-detail" id="translation">
+                <div class="service-icon-large">🌐</div>
                 <h3>Professional Translation Services</h3>
                 <p>We provide professional English ↔ Spanish translation of documents, client communications, and supporting materials for administrative and organizational purposes. Our translations maintain accuracy and cultural context to ensure clear communication.</p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card-detail" id="interpretation">
+                <div class="service-icon-large">🗣️</div>
                 <h3>Interpretation Services</h3>
                 <p>We offer real-time language interpretation for meetings, interviews, and administrative appointments in English and Spanish. Our interpreters facilitate clear communication to ensure all parties understand critical information and requirements.</p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card-detail" id="notary">
+                <div class="service-icon-large">✍️</div>
                 <h3>Notary Services</h3>
                 <p>We provide professional notarization of documents as authorized by U.S. notary law, ensuring your important documents are properly authenticated and legally recognized.</p>
             </div>
 
-            <div class="service-card">
+            <div class="service-card-detail" id="organization">
+                <div class="service-icon-large">📊</div>
+                <h3>Document Organization & Workflow Management</h3>
+                <p>We create structured filing systems, comprehensive checklists, and process tracking solutions using Excel and digital tools. Our approach ensures all documents are complete, accurate, and easily accessible throughout your administrative processes.</p>
+            </div>
+
+            <div class="service-card-detail" id="optimization">
+                <div class="service-icon-large">⚡</div>
                 <h3>Administrative Process Optimization</h3>
                 <p>We analyze and improve workflows for personal and organizational bureaucratic tasks. Using technology tools and best practices, we help reduce errors, save time, and improve compliance with regulatory requirements.</p>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Get Started Today</h2>
-            <p class="contact-intro">Ready to streamline your administrative processes? Contact us to discuss how we can help.</p>
-            <div class="contact-info">
-                <p class="contact-item">Phone: <strong>(771) 444-0779</strong></p>
-                <p class="contact-item">
-                    <a href="mailto:pedro.guerrero@burotech.ai">Email Us</a>
-                </p>
+        <section id="cta-services">
+            <h2>Ready to Get Started?</h2>
+            <p class="intro-text">Contact us to discuss how we can help streamline your administrative processes.</p>
+            <div class="cta-buttons-home">
+                <a href="contact.html" class="cta-button">Contact Us</a>
+                <a href="about.html" class="cta-button-secondary">Learn About Us</a>
             </div>
         </section>
     </main>
@@ -90,47 +86,5 @@
     <footer>
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
     </footer>
-
-    <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'es,en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-
-    function translateToSpanish() {
-        var selectElement = document.querySelector('.goog-te-combo');
-        if (selectElement) {
-            selectElement.value = 'es';
-            selectElement.dispatchEvent(new Event('change'));
-        }
-    }
-
-    function translateToEnglish() {
-        var selectElement = document.querySelector('.goog-te-combo');
-        if (selectElement) {
-            selectElement.value = 'en';
-            selectElement.dispatchEvent(new Event('change'));
-        }
-    }
-
-    // Auto-translate to Spanish on page load
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            var selectElement = document.querySelector('.goog-te-combo');
-            if (selectElement && selectElement.value === '') {
-                translateToSpanish();
-            }
-        }, 1000);
-    });
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
-    <!-- Hidden Google Translate element -->
-    <div id="google_translate_element" style="display: none;"></div>
-
 </body>
 </html>
