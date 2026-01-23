@@ -770,6 +770,13 @@ h2 a:active {
     margin-bottom: 1.25rem;
 }
 
+@media (max-width: 768px) {
+    .bio-content img {
+        float: none;
+        display: block;
+        margin: 0 auto 1.5rem;
+    }
+}
 .bio-note {
     margin-top: 2rem;
     padding-top: 1.5rem;
@@ -788,7 +795,11 @@ h2 a:active {
     color: var(--accent);
     text-decoration: underline;
 }
-
+.bio-content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 #why-choose {
     padding: 4rem 0;
 }
