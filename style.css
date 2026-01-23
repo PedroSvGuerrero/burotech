@@ -1,3 +1,4 @@
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -79,23 +80,12 @@ body {
 
 /* Google Translate Styling */
 #google_translate_element {
-    display: inline-block !important;
-}
-
-#google_translate_element select {
-    background-color: white !important;
-    border: 2px solid var(--secondary) !important;
-    padding: 0.4rem 0.8rem !important;
-    border-radius: 4px !important;
-    font-size: 0.9rem !important;
-    color: var(--text-dark) !important;
-    cursor: pointer !important;
+    display: inline-block;
 }
 
 .goog-te-gadget {
     font-family: inherit !important;
-    font-size: 0.9rem !important;
-    color: var(--text-dark) !important;
+    font-size: 0 !important;
 }
 
 .goog-te-gadget-simple {
@@ -134,11 +124,6 @@ body {
 
 .skiptranslate iframe {
     visibility: hidden !important;
-}
-
-/* Force visibility */
-.goog-te-combo {
-    display: block !important;
 }
 
 /* Language Switcher */
