@@ -770,13 +770,14 @@ h2 a:active {
     margin-bottom: 1.25rem;
 }
 
-@media (max-width: 768px) {
-    .bio-content img {
-        float: none;
-        display: block;
-        margin: 0 auto 1.5rem;
-    }
+.bio-photo {
+    width: 160px;
+    height: auto;
+    float: left;
+    margin: 0 16px 12px 0;
+    border-radius: 6px; 
 }
+
 .bio-note {
     margin-top: 2rem;
     padding-top: 1.5rem;
