@@ -1,146 +1,89 @@
 <!DOCTYPE html>
-<!-- Declares this is an HTML5 document -->
 <html lang="en">
-<!-- Sets the default page language to English for accessibility and SEO -->
-
 <head>
-    <!-- Head contains metadata and links — not visible to the user -->
     <meta charset="UTF-8">
-    <!-- Tells the browser to use UTF-8 encoding (supports all languages and special characters) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Makes the page responsive — fits correctly on phones, tablets, and desktops -->
     <meta name="description" content="BuroTech streamlines administrative and regulatory processes with efficient, technology-driven support.">
-    <!-- Short description shown in Google search results -->
     <title>BuroTech - Home</title>
-    <!-- Text shown in the browser tab -->
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <!-- Sets the small icon shown in the browser tab -->
     <link rel="stylesheet" href="style.css">
-    <!-- Links the external CSS file that controls all visual styling -->
 </head>
-
 <body>
-<!-- Everything inside body is visible to the user -->
-
     <nav class="navbar">
-    <!-- Top navigation bar — sticky, stays at the top when scrolling -->
         <div class="nav-container">
-        <!-- Centered wrapper that limits the nav width and aligns items horizontally -->
             <a href="index.html" class="nav-logo">
-            <!-- Clicking the logo takes the user back to the homepage -->
                 <img src="burotech-logo.png" alt="BuroTech Logo">
-                <!-- BuroTech logo image; alt text is shown if the image fails to load -->
             </a>
             <ul class="nav-menu">
-            <!-- Unordered list holding all navigation links and the language switcher -->
                 <li><a href="index.html" class="nav-link active">Home</a></li>
-                <!-- Home link — "active" class underlines it because we are on this page -->
                 <li><a href="services.html" class="nav-link">Services</a></li>
-                <!-- Link to the Services page -->
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <!-- Link to the About page -->
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <!-- Link to the Contact page -->
-                <li class="language-switcher">
-                <!-- Container for the EN / ES toggle buttons -->
-                    <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇺🇸 EN</button>
-                    <!-- Button to switch the page to English; calls switchLang('en') when clicked -->
-                    <button onclick="switchLang('es')" class="lang-btn" id="btn-es">🇪🇸 ES</button>
-                    <!-- Button to switch the page to Spanish; calls switchLang('es') when clicked -->
-                </li>
+                <li><div id="google_translate_element"></div></li>
             </ul>
         </div>
     </nav>
 
-    <div id="google_translate_element" style="display:none"></div>
-    <!-- Hidden div required by the Google Translate widget to initialize — invisible to the user -->
-
     <header>
-    <!-- Page header with a blue gradient background — contains the logo, title, and tagline -->
         <img src="burotech-logo.png" alt="BuroTech Logo" class="header-logo">
-        <!-- Large logo displayed in the header area -->
         <h1>BuroTech</h1>
-        <!-- Main page heading -->
         <p>Professional Administrative Solutions for Individuals and Organizations</p>
-        <!-- Tagline displayed below the main heading -->
     </header>
 
     <main>
-    <!-- Main content area — wraps all the visible page sections -->
-
         <section id="hero-intro">
-        <!-- Introductory section below the header -->
             <h2>Streamlining Complex Processes</h2>
-            <!-- Section heading -->
             <p class="intro-text">We provide technology-driven administrative support to help you navigate immigration documentation, regulatory compliance, and process optimization with confidence and efficiency.</p>
-            <!-- Brief description of BuroTech's mission -->
         </section>
 
         <section id="home-services">
-        <!-- Grid of clickable service cards that link to detailed sections on the Services page -->
             <h2>Our Services</h2>
             <div class="contact-grid">
-            <!-- CSS grid that arranges the service cards in responsive rows -->
-
                 <a href="services.html#immigration" class="contact-method-card service-link">
-                <!-- Clickable card — jumps to the Immigration section on the Services page -->
                     <div class="contact-icon">📄</div>
-                    <!-- Emoji icon representing this service -->
                     <h3>Immigration & Form Preparation</h3>
-                    <!-- Service title -->
                     <p class="contact-description">Expert assistance with visa applications, employment petitions, and business documentation.</p>
-                    <!-- Short description of the service -->
                 </a>
 
                 <a href="services.html#translation" class="contact-method-card service-link">
-                <!-- Clickable card — jumps to the Translation section -->
                     <div class="contact-icon">🌐</div>
                     <h3>Translation Services</h3>
                     <p class="contact-description">Professional English ↔ Spanish translation for documents and communications.</p>
                 </a>
 
                 <a href="services.html#interpretation" class="contact-method-card service-link">
-                <!-- Clickable card — jumps to the Interpretation section -->
                     <div class="contact-icon">🗣️</div>
                     <h3>Interpretation</h3>
                     <p class="contact-description">Real-time language interpretation for meetings and administrative appointments.</p>
                 </a>
 
                 <a href="services.html#notary" class="contact-method-card service-link">
-                <!-- Clickable card — jumps to the Notary section -->
                     <div class="contact-icon">✍️</div>
                     <h3>Notary Services</h3>
                     <p class="contact-description">Authorized notarization of documents as certified by U.S. notary law.</p>
                 </a>
 
                 <a href="services.html#organization" class="contact-method-card service-link">
-                <!-- Clickable card — jumps to the Document Organization section -->
                     <div class="contact-icon">📊</div>
                     <h3>Document Organization</h3>
                     <p class="contact-description">Structured filing systems and workflow management using digital tools.</p>
                 </a>
 
                 <a href="services.html#optimization" class="contact-method-card service-link">
-                <!-- Clickable card — jumps to the Process Optimization section -->
                     <div class="contact-icon">⚡</div>
                     <h3>Process Optimization</h3>
                     <p class="contact-description">Analysis and improvement of administrative workflows for efficiency.</p>
                 </a>
-
             </div>
             <div class="section-cta">
-            <!-- Centered area below the cards with a link to the full Services page -->
                 <a href="services.html" class="cta-button">View Detailed Services</a>
-                <!-- Button that navigates to the full Services page -->
             </div>
         </section>
 
         <section id="why-choose-home">
-        <!-- Section listing the four main reasons to choose BuroTech -->
             <h2>Why Choose BuroTech</h2>
             <div class="contact-grid">
-            <!-- Reuses the same responsive grid layout as the services section -->
-
                 <div class="contact-method-card">
                     <div class="contact-icon">🎯</div>
                     <h3>Expert Guidance</h3>
@@ -164,136 +107,53 @@
                     <h3>Technology-Driven</h3>
                     <p class="contact-description">Modern tools and systems for organized, efficient processes.</p>
                 </div>
-
             </div>
         </section>
 
         <section id="stats-home">
-        <!-- Statistics section showing BuroTech's proven track record -->
             <h2>Trusted by Clients Nationwide</h2>
             <div class="stats-grid">
-            <!-- Grid that displays the four stat numbers side by side -->
-
                 <div class="stat-card">
                     <div class="stat-number">500+</div>
-                    <!-- Large number shown prominently -->
                     <div class="stat-label">Cases Analyzed</div>
-                    <!-- Label describing what the number refers to -->
                 </div>
-
                 <div class="stat-card">
                     <div class="stat-number">700+</div>
                     <div class="stat-label">Documents Drafted</div>
                 </div>
-
                 <div class="stat-card">
                     <div class="stat-number">10+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
-
                 <div class="stat-card">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Committed</div>
                 </div>
-
             </div>
         </section>
 
         <section id="cta-home">
-        <!-- Final call-to-action section at the bottom of the page -->
             <h2>Ready to Get Started?</h2>
             <p class="intro-text">Let's discuss how BuroTech can help streamline your administrative processes with professional, organized support.</p>
             <div class="cta-buttons-home">
-            <!-- Flexbox row holding the two action buttons -->
                 <a href="contact.html" class="cta-button">Contact Us</a>
-                <!-- Primary button — takes the user to the Contact page -->
                 <a href="about.html" class="cta-button-secondary">Learn More</a>
-                <!-- Secondary button — takes the user to the About page -->
             </div>
         </section>
-
     </main>
 
     <footer>
-    <!-- Footer shown at the bottom of the page -->
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
-        <!-- Copyright notice — &copy; renders as the © symbol -->
     </footer>
-
-    <script type="text/javascript">
-
-        /* ── Google Translate Initialization ──────────────────────────────
-           This function is called automatically by the Google Translate
-           script below once it finishes loading from Google's servers.    */
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',        /* Tells Google the page is originally written in English */
-                includedLanguages: 'es',   /* Limits translation options to Spanish only */
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                /* Uses the simple/compact widget layout so it stays hidden from view */
-            }, 'google_translate_element');
-            /* Attaches the widget to the hidden div with id="google_translate_element" */
-        }
-
-        /* ── Language Switcher ────────────────────────────────────────────
-           Sets a browser cookie telling Google Translate which language
-           to display, then reloads the page so the translation is applied.
-           Google Translate reads the "googtrans" cookie on every page load. */
-        function switchLang(lang) {
-            var host = window.location.hostname;
-            /* Gets the current domain name (e.g. burotech.ai) to scope the cookie correctly */
-
-            if (lang === 'en') {
-                /* If the user clicked EN, set the cookie to /en/en meaning "no translation needed" */
-                document.cookie = 'googtrans=/en/en; path=/';
-                /* Sets the cookie for the root path of the site */
-                document.cookie = 'googtrans=/en/en; path=/; domain=' + host;
-                /* Sets the cookie for the exact domain (e.g. burotech.ai) */
-                document.cookie = 'googtrans=/en/en; path=/; domain=.' + host;
-                /* Sets the cookie for the domain and all subdomains (e.g. www.burotech.ai) */
-            } else {
-                /* If the user clicked ES, set the cookie to /en/es meaning "translate from English to Spanish" */
-                document.cookie = 'googtrans=/en/' + lang + '; path=/';
-                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + host;
-                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + host;
-            }
-
-            window.location.reload();
-            /* Reloads the page — Google Translate reads the new cookie and applies the translation automatically */
-        }
-
-        /* ── Active Button Highlighter ────────────────────────────────────
-           Removes the blue highlight from all language buttons, then adds
-           it only to the button that matches the currently active language. */
-        function updateActiveLangBtn(lang) {
-            document.querySelectorAll('.lang-btn').forEach(function(b) {
-                b.classList.remove('active');
-                /* Removes the "active" CSS class (blue background) from every language button */
-            });
-            var btn = document.getElementById('btn-' + lang);
-            /* Finds the button element whose id is "btn-en" or "btn-es" */
-            if (btn) btn.classList.add('active');
-            /* Adds the "active" CSS class to highlight the correct button */
-        }
-
-        /* ── Page Load: Detect Current Language ──────────────────────────
-           Runs once the page has fully loaded. Reads the googtrans cookie
-           to detect which language is currently active, then highlights
-           the matching EN or ES button accordingly.                       */
-        document.addEventListener('DOMContentLoaded', function() {
-            var match = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-            /* Searches the browser cookies for a pattern like googtrans=/en/es */
-            var lang = (match && match[1] !== 'en') ? match[1] : 'en';
-            /* If a non-English language code is found in the cookie, use it; otherwise default to 'en' */
-            updateActiveLangBtn(lang);
-            /* Highlights the correct EN or ES button based on the detected language */
-        });
-
-    </script>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <!-- Loads the Google Translate widget library from Google's servers.
-         Once loaded, it automatically calls googleTranslateElementInit() -->
-
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'fr,de,es',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
