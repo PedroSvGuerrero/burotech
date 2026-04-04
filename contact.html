@@ -1,178 +1,103 @@
 <!DOCTYPE html>
-<!-- Declares this is an HTML5 document -->
 <html lang="en">
-<!-- Sets the default page language to English for accessibility and SEO -->
-
 <head>
-    <!-- Head contains metadata and links — not visible to the user -->
     <meta charset="UTF-8">
-    <!-- Tells the browser to use UTF-8 encoding (supports all languages and special characters) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Makes the page responsive — fits correctly on phones, tablets, and desktops -->
     <meta name="description" content="Contact BuroTech for administrative support services. Reach us by phone, email, or visit our office in Arlington, Virginia.">
-    <!-- Short description shown in Google search results -->
     <title>Contact - BuroTech</title>
-    <!-- Text shown in the browser tab -->
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <!-- Sets the small icon shown in the browser tab -->
     <link rel="stylesheet" href="style.css">
-    <!-- Links the external CSS file that controls all visual styling -->
 </head>
-
 <body>
-<!-- Everything inside body is visible to the user -->
-
     <nav class="navbar">
-    <!-- Top navigation bar — sticky, stays at the top when scrolling -->
         <div class="nav-container">
-        <!-- Centered wrapper that limits the nav width and aligns items horizontally -->
             <a href="index.html" class="nav-logo">
-            <!-- Clicking the logo takes the user back to the homepage -->
                 <img src="burotech-logo.png" alt="BuroTech Logo">
-                <!-- BuroTech logo image; alt text is shown if the image fails to load -->
             </a>
             <ul class="nav-menu">
-            <!-- Unordered list holding all navigation links and the language switcher -->
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <!-- Link to the Home page -->
                 <li><a href="services.html" class="nav-link">Services</a></li>
-                <!-- Link to the Services page -->
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <!-- Link to the About page -->
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
                 <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                <!-- Contact link — "active" class underlines it because we are on this page -->
-                <li class="language-switcher">
-                <!-- Container for the EN / ES toggle buttons -->
-                    <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇺🇸 EN</button>
-                    <!-- Button to switch the page to English; calls switchLang('en') when clicked -->
-                    <button onclick="switchLang('es')" class="lang-btn" id="btn-es">🇪🇸 ES</button>
-                    <!-- Button to switch the page to Spanish; calls switchLang('es') when clicked -->
-                </li>
+                <li><div id="google_translate_element"></div></li>
             </ul>
         </div>
     </nav>
 
-    <div id="google_translate_element" style="display:none"></div>
-    <!-- Hidden div required by the Google Translate widget to initialize — invisible to the user -->
-
     <header>
-    <!-- Page header with a blue gradient background -->
         <h1>Contact Us</h1>
-        <!-- Main page heading -->
         <p>Let's discuss how we can help streamline your administrative processes.</p>
-        <!-- Tagline displayed below the main heading -->
     </header>
 
     <main>
-    <!-- Main content area — wraps all the visible page sections -->
-
         <section id="contact-intro">
-        <!-- Short introductory paragraph at the top of the contact page -->
             <h2>Get in Touch</h2>
-            <!-- Section heading -->
             <p class="intro-text">Whether you need assistance with immigration documentation, translations, notary services, or administrative process optimization, we're here to help. Reach out using any of the methods below, and we'll respond promptly.</p>
-            <!-- Overview paragraph explaining how to reach BuroTech -->
         </section>
 
         <section id="contact-methods">
-        <!-- Grid of four contact method cards -->
             <div class="contact-grid">
-            <!-- CSS grid that arranges the cards in responsive rows -->
-
                 <div class="contact-method-card">
-                <!-- Phone contact card -->
                     <div class="contact-icon">📞</div>
-                    <!-- Emoji icon for phone -->
                     <h3>Phone</h3>
-                    <!-- Card title -->
                     <p class="contact-detail"><a href="tel:+17714440779">(771) 444-0779</a></p>
-                    <!-- Clickable phone number — tapping on mobile will open the dialer -->
                     <p class="contact-description">Call us during business hours for immediate assistance.</p>
-                    <!-- Short description of this contact method -->
                 </div>
 
                 <div class="contact-method-card">
-                <!-- Email contact card -->
                     <div class="contact-icon">✉️</div>
-                    <!-- Emoji icon for email -->
                     <h3>Email</h3>
                     <p class="contact-detail"><a href="mailto:pedro.guerrero@burotech.ai">pedro.guerrero@burotech.ai</a></p>
-                    <!-- Clickable email address — clicking opens the user's default email app -->
                     <p class="contact-description">Send us a detailed message and we'll respond within 24 hours.</p>
                 </div>
 
                 <div class="contact-method-card">
-                <!-- Location card -->
                     <div class="contact-icon">📍</div>
-                    <!-- Emoji icon for location -->
                     <h3>Location</h3>
                     <p class="contact-detail">Arlington, Virginia</p>
-                    <!-- Business location — plain text, not a link -->
                     <p class="contact-description">Serving clients in the DMV area and beyond.</p>
                 </div>
 
                 <div class="contact-method-card">
-                <!-- LinkedIn card -->
                     <div class="contact-icon">💼</div>
-                    <!-- Emoji icon for LinkedIn/professional -->
                     <h3>LinkedIn</h3>
                     <p class="contact-detail"><a href="https://www.linkedin.com/in/pedrosvguerrero/" target="_blank" rel="noopener noreferrer">Connect with Pedro</a></p>
-                    <!-- LinkedIn link — target="_blank" opens in a new tab; rel="noopener noreferrer" is a security best practice -->
                     <p class="contact-description">Follow our professional updates and insights.</p>
                 </div>
-
             </div>
         </section>
 
         <section id="contact-form-section">
-        <!-- Contact form section with a light gray background -->
             <h2>Send Us a Message</h2>
             <p class="form-intro">Fill out the form below and we'll get back to you as soon as possible.</p>
-            <!-- Intro text above the form -->
-
+            
             <form class="contact-form" action="https://formsubmit.co/pedro.guerrero@burotech.ai" method="POST">
-            <!-- Contact form — submits data to FormSubmit.co which forwards it to Pedro's email -->
-
-                <!-- FormSubmit hidden configuration fields — not visible to the user -->
+                <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="New contact from BuroTech website">
-                <!-- Sets the email subject line that Pedro will see in his inbox -->
                 <input type="hidden" name="_captcha" value="false">
-                <!-- Disables FormSubmit's built-in CAPTCHA -->
                 <input type="hidden" name="_template" value="table">
-                <!-- Tells FormSubmit to format the email as a clean table layout -->
-
+                
                 <div class="form-row">
-                <!-- Two-column row for name and email fields -->
                     <div class="form-group">
-                    <!-- Individual field wrapper — controls label + input layout -->
                         <label for="name">Full Name *</label>
-                        <!-- Label linked to the name input; * means this field is required -->
                         <input type="text" id="name" name="name" required>
-                        <!-- Text input for the user's full name; required prevents form submission if empty -->
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <!-- Label linked to the email input -->
                         <input type="email" id="email" name="email" required>
-                        <!-- Email input — the browser validates that the format looks like an email address -->
                     </div>
                 </div>
 
                 <div class="form-row">
-                <!-- Two-column row for phone and service selection -->
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <!-- No asterisk — this field is optional -->
                         <input type="tel" id="phone" name="phone">
-                        <!-- Phone number input — type="tel" shows the numeric keyboard on mobile -->
                     </div>
                     <div class="form-group">
                         <label for="service">Service of Interest</label>
-                        <!-- Label for the dropdown menu -->
                         <select id="service" name="service">
-                        <!-- Dropdown menu listing all available services -->
                             <option value="">Select a service</option>
-                            <!-- Default placeholder option shown before the user selects anything -->
                             <option value="Immigration & Company Form Preparation">Immigration & Company Form Preparation</option>
                             <option value="Translation Services">Translation Services</option>
                             <option value="Interpretation Services">Interpretation Services</option>
@@ -184,130 +109,47 @@
                 </div>
 
                 <div class="form-group">
-                <!-- Full-width row for the message textarea -->
                     <label for="message">Message *</label>
-                    <!-- Label linked to the textarea -->
                     <textarea id="message" name="message" rows="6" required placeholder="Tell us about your needs and how we can help..."></textarea>
-                    <!-- Multi-line text area; rows="6" sets the default visible height; required prevents empty submission -->
                 </div>
 
                 <button type="submit" class="submit-btn">Send Message</button>
-                <!-- Submit button — clicking this sends the form data to FormSubmit.co -->
-
             </form>
         </section>
 
         <section id="business-hours">
-        <!-- Business hours section shown below the contact form -->
             <h2>Business Hours</h2>
             <div class="hours-container">
-            <!-- White card with shadow containing the hours table -->
-
                 <div class="hours-item">
-                <!-- One row in the hours table -->
                     <span class="day">Monday - Friday</span>
-                    <!-- Day label on the left -->
                     <span class="time">9:00 AM - 6:00 PM EST</span>
-                    <!-- Time on the right -->
                 </div>
-
                 <div class="hours-item">
                     <span class="day">Saturday</span>
                     <span class="time">By Appointment</span>
                 </div>
-
                 <div class="hours-item">
                     <span class="day">Sunday</span>
                     <span class="time">Closed</span>
                 </div>
-
             </div>
             <p class="hours-note">For urgent matters outside business hours, please send an email and we'll respond as quickly as possible.</p>
-            <!-- Note shown below the hours card in italic text -->
         </section>
-
     </main>
 
     <footer>
-    <!-- Footer shown at the bottom of the page -->
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
-        <!-- Copyright notice — &copy; renders as the © symbol -->
     </footer>
 
-    <script type="text/javascript">
-
-        /* ── Google Translate Initialization ──────────────────────────────
-           This function is called automatically by the Google Translate
-           script below once it finishes loading from Google's servers.    */
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',        /* Tells Google the page is originally written in English */
-                includedLanguages: 'es',   /* Limits translation options to Spanish only */
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                /* Uses the simple/compact widget layout so it stays hidden from view */
-            }, 'google_translate_element');
-            /* Attaches the widget to the hidden div with id="google_translate_element" */
-        }
-
-        /* ── Language Switcher ────────────────────────────────────────────
-           Sets a browser cookie telling Google Translate which language
-           to display, then reloads the page so the translation is applied.
-           Google Translate reads the "googtrans" cookie on every page load. */
-        function switchLang(lang) {
-            var host = window.location.hostname;
-            /* Gets the current domain name (e.g. burotech.ai) to scope the cookie correctly */
-
-            if (lang === 'en') {
-                /* If the user clicked EN, set the cookie to /en/en meaning "no translation needed" */
-                document.cookie = 'googtrans=/en/en; path=/';
-                /* Sets the cookie for the root path of the site */
-                document.cookie = 'googtrans=/en/en; path=/; domain=' + host;
-                /* Sets the cookie for the exact domain (e.g. burotech.ai) */
-                document.cookie = 'googtrans=/en/en; path=/; domain=.' + host;
-                /* Sets the cookie for the domain and all subdomains (e.g. www.burotech.ai) */
-            } else {
-                /* If the user clicked ES, set cookie to /en/es meaning "translate from English to Spanish" */
-                document.cookie = 'googtrans=/en/' + lang + '; path=/';
-                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + host;
-                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + host;
-            }
-
-            window.location.reload();
-            /* Reloads the page — Google Translate reads the new cookie and applies the translation automatically */
-        }
-
-        /* ── Active Button Highlighter ────────────────────────────────────
-           Removes the blue highlight from all language buttons, then adds
-           it only to the button that matches the currently active language. */
-        function updateActiveLangBtn(lang) {
-            document.querySelectorAll('.lang-btn').forEach(function(b) {
-                b.classList.remove('active');
-                /* Removes the "active" CSS class (blue background) from every language button */
-            });
-            var btn = document.getElementById('btn-' + lang);
-            /* Finds the button element whose id is "btn-en" or "btn-es" */
-            if (btn) btn.classList.add('active');
-            /* Adds the "active" CSS class to highlight the correct button */
-        }
-
-        /* ── Page Load: Detect Current Language ──────────────────────────
-           Runs once the page has fully loaded. Reads the googtrans cookie
-           to detect which language is active, then highlights the matching
-           EN or ES button accordingly.                                     */
-        document.addEventListener('DOMContentLoaded', function() {
-            var match = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-            /* Searches the browser cookies for a pattern like googtrans=/en/es */
-            var lang = (match && match[1] !== 'en') ? match[1] : 'en';
-            /* If a non-English language code is found in the cookie, use it; otherwise default to 'en' */
-            updateActiveLangBtn(lang);
-            /* Highlights the correct EN or ES button based on the detected language */
-        });
-
-    </script>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <!-- Loads the Google Translate widget library from Google's servers.
-         Once loaded, it automatically calls googleTranslateElementInit() -->
-
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'fr,de,es',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
