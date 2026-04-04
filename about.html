@@ -1,157 +1,250 @@
 <!DOCTYPE html>
+<!-- Declares this is an HTML5 document -->
 <html lang="en">
+<!-- Sets the default page language to English for accessibility and SEO -->
+
 <head>
+    <!-- Head contains metadata and links — not visible to the user -->
     <meta charset="UTF-8">
+    <!-- Tells the browser to use UTF-8 encoding (supports all languages and special characters) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive — fits correctly on phones, tablets, and desktops -->
     <meta name="description" content="Learn about BuroTech and how we streamline administrative processes with technology-driven solutions.">
+    <!-- Short description shown in Google search results -->
     <title>About - BuroTech</title>
+    <!-- Text shown in the browser tab -->
     <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <!-- Sets the small icon shown in the browser tab -->
     <link rel="stylesheet" href="style.css">
+    <!-- Links the external CSS file that controls all visual styling -->
 </head>
+
 <body>
+<!-- Everything inside body is visible to the user -->
+
     <nav class="navbar">
+    <!-- Top navigation bar — sticky, stays at the top when scrolling -->
         <div class="nav-container">
+        <!-- Centered wrapper that limits the nav width and aligns items horizontally -->
             <a href="index.html" class="nav-logo">
+            <!-- Clicking the logo takes the user back to the homepage -->
                 <img src="burotech-logo.png" alt="BuroTech Logo">
+                <!-- BuroTech logo image; alt text is shown if the image fails to load -->
             </a>
             <ul class="nav-menu">
+            <!-- Unordered list holding all navigation links and the language switcher -->
                 <li><a href="index.html" class="nav-link">Home</a></li>
+                <!-- Link to the Home page -->
                 <li><a href="services.html" class="nav-link">Services</a></li>
+                <!-- Link to the Services page -->
                 <li><a href="about.html" class="nav-link active">About</a></li>
+                <!-- About link — "active" class underlines it because we are on this page -->
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <!-- Link to the Contact page -->
                 <li class="language-switcher">
+                <!-- Container for the EN / ES toggle buttons -->
                     <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇺🇸 EN</button>
+                    <!-- Button to switch the page to English; calls switchLang('en') when clicked -->
                     <button onclick="switchLang('es')" class="lang-btn" id="btn-es">🇪🇸 ES</button>
+                    <!-- Button to switch the page to Spanish; calls switchLang('es') when clicked -->
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hidden Google Translate element (needed for widget initialization) -->
     <div id="google_translate_element" style="display:none"></div>
+    <!-- Hidden div required by the Google Translate widget to initialize — invisible to the user -->
 
     <header>
+    <!-- Page header with a blue gradient background -->
         <h1>About BuroTech</h1>
+        <!-- Main page heading -->
         <p>Learn about BuroTech and how we streamline administrative processes with technology-driven solutions.</p>
+        <!-- Tagline displayed below the main heading -->
     </header>
 
     <main>
+    <!-- Main content area — wraps all the visible page sections -->
+
         <section id="about-mission">
+        <!-- Section describing BuroTech's mission and purpose -->
             <h2>Our Mission</h2>
+            <!-- Section heading -->
             <p class="mission-statement">BuroTech was founded to simplify the complex world of administrative processes through technology-driven solutions and expert guidance. We bridge the gap between bureaucratic requirements and practical execution, helping individuals and organizations navigate their administrative needs with confidence and efficiency.</p>
+            <!-- Mission statement paragraph in a larger font size -->
         </section>
 
         <section id="about-approach">
+        <!-- Section explaining how BuroTech works -->
             <h2>Our Approach</h2>
             <p>We provide authorized, non-legal support for document preparation, compliance, and workflow management. Our services are designed to help clients navigate complex bureaucratic processes efficiently using structured methodologies and modern technology tools.</p>
+            <!-- First paragraph describing BuroTech's methodology -->
             <p>What sets us apart is our commitment to accuracy, organization, and leveraging technology to streamline traditionally time-consuming tasks. Whether you're preparing immigration documents, managing business filings, or optimizing administrative workflows, we ensure your documents and processes are properly organized and compliant.</p>
+            <!-- Second paragraph highlighting key differentiators -->
         </section>
 
         <section id="founder-bio">
+        <!-- Section with Pedro's biography and professional background -->
             <h2>Meet the Founder</h2>
             <div class="bio-container">
+            <!-- Centered wrapper that limits the bio content width -->
                 <div class="bio-content">
+                <!-- Inner container for the bio text and photo -->
                     <h3>Pedro Salvador Guerrero</h3>
+                    <!-- Founder's full name -->
                     <p class="bio-title">Founder & Principal Consultant</p>
+                    <!-- Founder's title displayed in blue below the name -->
 
                     <img src="1765154887630.jpeg" alt="Pedro Salvador Guerrero" class="bio-photo">
+                    <!-- Founder's photo; alt text describes the image for accessibility -->
 
                     <p>Pedro Salvador Guerrero brings over seven years of specialized experience in immigration documentation, regulatory compliance, and administrative process management to BuroTech. As a U.S.-Mexican citizen fluent in English and Spanish, Pedro has dedicated his career to helping individuals and organizations navigate complex bureaucratic systems with precision and efficiency.</p>
+                    <!-- First bio paragraph: overview and background -->
 
                     <p>Currently helping law firms in DC and Virginia with employment-based and humanitarian immigration paralegal matters before USCIS and EOIR, through BuroTech. His expertise includes drafting legal documents, preparing visa petitions, managing client communications, and providing bilingual translation and interpretation services.</p>
+                    <!-- Second bio paragraph: current work -->
 
                     <p>Pedro's professional background includes analyzing cases for over 500 visa petitioners from Latinamerica, Europe, and Asia, drafting more than 700 immigration-related documents, and developing optimized workflows using Excel, automation tools, and technology-driven solutions. Previously, he served as a Documentation Officer at the Consular Office of the Mexican Embassy, where he assisted over 1,500 citizens with document processing and regulatory compliance.</p>
+                    <!-- Third bio paragraph: track record and previous experience -->
 
                     <p>Pedro combines deep legal knowledge with practical expertise in document preparation, compliance frameworks, and process optimization. His experience in Mexican government agencies, including the Mexican homolog of the Administration for Children and Families (SNDIF), has equipped him with comprehensive understanding of regulatory analysis and policy implementation.</p>
+                    <!-- Fourth bio paragraph: government experience -->
 
                     <p>Pedro founded BuroTech to provide accessible, technology-driven administrative support that simplifies complex processes for individuals and organizations. His commitment to accuracy, organization, and leveraging modern tools ensures clients receive professional guidance throughout their administrative journeys.</p>
+                    <!-- Fifth bio paragraph: why BuroTech was founded -->
 
                     <p class="bio-note">Connect with Pedro on <a href="https://www.linkedin.com/in/pedrosvguerrero/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                    <!-- LinkedIn link — target="_blank" opens it in a new tab; rel="noopener noreferrer" is a security best practice -->
                 </div>
             </div>
         </section>
 
         <section id="why-choose">
+        <!-- Section listing four key advantages of working with BuroTech -->
             <h2>Why Choose BuroTech</h2>
             <div class="benefits-grid">
+            <!-- Responsive grid that arranges the four benefit cards -->
+
                 <div class="benefit-card">
                     <h3>Technology-Driven</h3>
                     <p>We leverage modern tools and digital systems to streamline processes, reduce errors, and save you time.</p>
                 </div>
+
                 <div class="benefit-card">
                     <h3>Detail-Oriented</h3>
                     <p>Every document and process is handled with meticulous attention to accuracy and completeness.</p>
                 </div>
+
                 <div class="benefit-card">
                     <h3>Bilingual Support</h3>
                     <p>Professional services in both English and Spanish, ensuring clear communication throughout your process.</p>
                 </div>
+
                 <div class="benefit-card">
                     <h3>Organized Systems</h3>
                     <p>Structured filing, tracking, and workflow management to keep your administrative tasks on schedule.</p>
                 </div>
+
             </div>
         </section>
 
         <section id="contact" class="contact">
+        <!-- Simple contact prompt section at the bottom of the About page -->
             <h2>Let's Work Together</h2>
             <p class="contact-intro">Ready to simplify your administrative processes? Get in touch to discuss how we can help.</p>
             <div class="contact-info">
+            <!-- Flex column holding the phone number and contact button -->
                 <p class="contact-item">Phone: <strong>(771) 444-0779</strong></p>
+                <!-- Phone number displayed in bold -->
                 <p class="contact-item">
                     <a href="contact.html">Contact Us</a>
+                    <!-- Button-styled link that navigates to the full Contact page -->
                 </p>
             </div>
         </section>
+
     </main>
 
     <footer>
+    <!-- Footer shown at the bottom of the page -->
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
+        <!-- Copyright notice — &copy; renders as the © symbol -->
     </footer>
 
     <script type="text/javascript">
+
+        /* ── Google Translate Initialization ──────────────────────────────
+           This function is called automatically by the Google Translate
+           script below once it finishes loading from Google's servers.    */
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'es',
+                pageLanguage: 'en',        /* Tells Google the page is originally written in English */
+                includedLanguages: 'es',   /* Limits translation options to Spanish only */
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                /* Uses the simple/compact widget layout so it stays hidden from view */
             }, 'google_translate_element');
+            /* Attaches the widget to the hidden div with id="google_translate_element" */
         }
 
+        /* ── Language Switcher ────────────────────────────────────────────
+           Sets a browser cookie telling Google Translate which language
+           to display, then reloads the page so the translation is applied.
+           Google Translate reads the "googtrans" cookie on every page load. */
         function switchLang(lang) {
+            var host = window.location.hostname;
+            /* Gets the current domain name (e.g. burotech.ai) to scope the cookie correctly */
+
             if (lang === 'en') {
-                var expiry = 'expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
-                document.cookie = 'googtrans=; ' + expiry;
-                document.cookie = 'googtrans=; ' + expiry + ' domain=' + window.location.hostname + ';';
-                window.location.reload();
-                return;
-            }
-            var combo = document.querySelector('.goog-te-combo');
-            if (combo) {
-                combo.value = lang;
-                combo.dispatchEvent(new Event('change'));
-                updateActiveLangBtn(lang);
+                /* If the user clicked EN, set the cookie to /en/en meaning "no translation needed" */
+                document.cookie = 'googtrans=/en/en; path=/';
+                /* Sets the cookie for the root path of the site */
+                document.cookie = 'googtrans=/en/en; path=/; domain=' + host;
+                /* Sets the cookie for the exact domain (e.g. burotech.ai) */
+                document.cookie = 'googtrans=/en/en; path=/; domain=.' + host;
+                /* Sets the cookie for the domain and all subdomains (e.g. www.burotech.ai) */
             } else {
-                setTimeout(function() { switchLang(lang); }, 300);
+                /* If the user clicked ES, set cookie to /en/es meaning "translate from English to Spanish" */
+                document.cookie = 'googtrans=/en/' + lang + '; path=/';
+                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + host;
+                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + host;
             }
+
+            window.location.reload();
+            /* Reloads the page — Google Translate reads the new cookie and applies the translation automatically */
         }
 
+        /* ── Active Button Highlighter ────────────────────────────────────
+           Removes the blue highlight from all language buttons, then adds
+           it only to the button that matches the currently active language. */
         function updateActiveLangBtn(lang) {
             document.querySelectorAll('.lang-btn').forEach(function(b) {
                 b.classList.remove('active');
+                /* Removes the "active" CSS class (blue background) from every language button */
             });
             var btn = document.getElementById('btn-' + lang);
+            /* Finds the button element whose id is "btn-en" or "btn-es" */
             if (btn) btn.classList.add('active');
+            /* Adds the "active" CSS class to highlight the correct button */
         }
 
+        /* ── Page Load: Detect Current Language ──────────────────────────
+           Runs once the page has fully loaded. Reads the googtrans cookie
+           to detect which language is active, then highlights the matching
+           EN or ES button accordingly.                                     */
         document.addEventListener('DOMContentLoaded', function() {
-            var cookies = document.cookie.split(';');
-            var isSpanish = cookies.some(function(c) {
-                return c.trim().startsWith('googtrans=') && c.includes('/es');
-            });
-            updateActiveLangBtn(isSpanish ? 'es' : 'en');
+            var match = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+            /* Searches the browser cookies for a pattern like googtrans=/en/es */
+            var lang = (match && match[1] !== 'en') ? match[1] : 'en';
+            /* If a non-English language code is found in the cookie, use it; otherwise default to 'en' */
+            updateActiveLangBtn(lang);
+            /* Highlights the correct EN or ES button based on the detected language */
         });
+
     </script>
+
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Loads the Google Translate widget library from Google's servers.
+         Once loaded, it automatically calls googleTranslateElementInit() -->
+
 </body>
 </html>
