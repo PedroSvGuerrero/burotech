@@ -19,10 +19,16 @@
                 <li><a href="services.html" class="nav-link active">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><div id="google_translate_element"></div></li>
+                <li class="language-switcher">
+                    <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇺🇸 EN</button>
+                    <button onclick="switchLang('es')" class="lang-btn" id="btn-es">🇪🇸 ES</button>
+                </li>
             </ul>
         </div>
     </nav>
+
+    <!-- Hidden Google Translate element (needed for widget initialization) -->
+    <div id="google_translate_element" style="display:none"></div>
 
     <header>
         <h1>Our Services</h1>
@@ -88,16 +94,49 @@
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
     </footer>
 
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'fr,de,es',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>    
-      
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        function switchLang(lang) {
+            if (lang === 'en') {
+                var expiry = 'expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+                document.cookie = 'googtrans=; ' + expiry;
+                document.cookie = 'googtrans=; ' + expiry + ' domain=' + window.location.hostname + ';';
+                window.location.reload();
+                return;
+            }
+            var combo = document.querySelector('.goog-te-combo');
+            if (combo) {
+                combo.value = lang;
+                combo.dispatchEvent(new Event('change'));
+                updateActiveLangBtn(lang);
+            } else {
+                setTimeout(function() { switchLang(lang); }, 300);
+            }
+        }
+
+        function updateActiveLangBtn(lang) {
+            document.querySelectorAll('.lang-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            var btn = document.getElementById('btn-' + lang);
+            if (btn) btn.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var cookies = document.cookie.split(';');
+            var isSpanish = cookies.some(function(c) {
+                return c.trim().startsWith('googtrans=') && c.includes('/es');
+            });
+            updateActiveLangBtn(isSpanish ? 'es' : 'en');
+        });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
