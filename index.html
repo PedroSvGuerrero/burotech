@@ -183,6 +183,15 @@
             var lang = (match && match[1] !== 'en') ? match[1] : 'en';
             updateActiveLangBtn(lang);
         });
+        /* Force body back to top after Google Translate sets it */
+        document.addEventListener('DOMContentLoaded', function() {
+            var observer = new MutationObserver(function() {
+                if (document.body.style.top && document.body.style.top !== '0px') {
+                    document.body.style.top = '0';
+                }
+            });
+            observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+        });
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
