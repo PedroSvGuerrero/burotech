@@ -24,10 +24,10 @@
                     <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇺🇸 EN</button>
                     <button onclick="switchLang('es')" class="lang-btn" id="btn-es">🇪🇸 ES</button>
                 </li>
-                
             </ul>
         </div>
     </nav>
+
     <div id="google_translate_element" style="display:none"></div>
 
     <header>
@@ -53,7 +53,7 @@
                 <div class="contact-method-card">
                     <div class="contact-icon">✉️</div>
                     <h3>Email</h3>
-                    <p class="contact-detail"><a href="/cdn-cgi/l/email-protection#69190c0d1b06470e1c0c1b1b0c1b06290b1c1b061d0c0a01470800"><span class="__cf_email__" data-cfemail="e79782839588c98092829595829588a7859295889382848fc9868e">[email&#160;protected]</span></a></p>
+                    <p class="contact-detail"><a href="mailto:pedro.guerrero@burotech.ai">pedro.guerrero@burotech.ai</a></p>
                     <p class="contact-description">Send us a detailed message and we'll respond within 24 hours.</p>
                 </div>
 
@@ -76,13 +76,12 @@
         <section id="contact-form-section">
             <h2>Send Us a Message</h2>
             <p class="form-intro">Fill out the form below and we'll get back to you as soon as possible.</p>
-            
+
             <form class="contact-form" action="https://formsubmit.co/pedro.guerrero@burotech.ai" method="POST">
-                <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="New contact from BuroTech website">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
@@ -146,8 +145,46 @@
         <p>&copy; 2026 BuroTech LLC. All rights reserved.</p>
     </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'fr,de,es',
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+        function switchLang(lang) {
+            var host = window.location.hostname;
+            if (lang === 'en') {
+                document.cookie = 'googtrans=/en/en; path=/';
+                document.cookie = 'googtrans=/en/en; path=/; domain=' + host;
+                document.cookie = 'googtrans=/en/en; path=/; domain=.' + host;
+            } else {
+                document.cookie = 'googtrans=/en/' + lang + '; path=/';
+                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + host;
+                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + host;
+            }
+            window.location.reload();
+        }
+        function updateActiveLangBtn(lang) {
+            document.querySelectorAll('.lang-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            var btn = document.getElementById('btn-' + lang);
+            if (btn) btn.classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var match = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+            var lang = (match && match[1] !== 'en') ? match[1] : 'en';
+            updateActiveLangBtn(lang);
+            var observer = new MutationObserver(function() {
+                if (document.body.style.top && document.body.style.top !== '0px') {
+                    document.body.style.top = '0';
+                }
+            });
+            observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+        });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
