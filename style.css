@@ -79,48 +79,28 @@ body {
     border-bottom-color: var(--secondary);
 }
 
-/* ── Google Translate Widget ── */
+/* ── Google Translate (hidden widget — translation triggered via cookie) ── */
 #google_translate_element {
-    display: inline-flex !important;
-    align-items: center;
-}
-
-.goog-te-gadget {
-    font-family: inherit !important;
-    font-size: 0.85rem !important;
-    color: var(--text-dark) !important;
-    margin: 0 !important;
-}
-
-.goog-te-gadget-simple {
-    background-color: transparent !important;
-    border: 2px solid var(--secondary) !important;
-    padding: 0.3rem 0.75rem !important;
-    border-radius: 4px !important;
-    font-size: 0.85rem !important;
-    transition: all 0.3s ease !important;
-    white-space: nowrap;
-}
-
-.goog-te-gadget-simple:hover {
-    background-color: var(--bg-light) !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value {
-    color: var(--text-dark) !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value span {
-    color: var(--text-dark) !important;
-}
-
-.goog-te-gadget-icon {
     display: none !important;
 }
 
-/* Hide Google Translate top banner */
-.goog-te-banner-frame.skiptranslate {
+/* Hide the top banner Google Translate injects */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
+.skiptranslate > iframe {
+    display: none !important;
+    height: 0 !important;
+}
+
+/* Prevent Google Translate from offsetting the page body downward */
+body {
+    top: 0 !important;
 }
 
 /* Language Switcher (legacy - kept for 1.html compatibility) */
@@ -157,19 +137,25 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.35rem 0.75rem;
     background: transparent;
     color: var(--text-dark);
     border: 2px solid var(--secondary);
     border-radius: 4px;
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .lang-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.lang-btn.active {
     background: var(--secondary);
     color: var(--white);
 }
