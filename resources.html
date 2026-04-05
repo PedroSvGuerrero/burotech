@@ -373,17 +373,21 @@
             <a href="index.html" class="nav-logo">
                 <img src="burotech-logo.png" alt="BuroTech Logo">
             </a>
-            <div id="google_translate_element"></div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="resources.html" class="nav-link active">Resources</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="language-switcher">
+                    <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇺🇸 EN</button>
+                    <button onclick="switchLang('es')" class="lang-btn" id="btn-es">🇪🇸 ES</button>
+                </li>
                 
             </ul>
         </div>
     </nav>
+    <div id="google_translate_element" style="display:none"></div>
 
     <header class="resources-header">
         <div class="header-inner">
@@ -769,15 +773,39 @@
             });
         });
     </script>
-
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'fr,de,es',
+                includedLanguages: 'es',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
+        function switchLang(lang) {
+            var host = window.location.hostname;
+            if (lang === 'en') {
+                document.cookie = 'googtrans=/en/en; path=/';
+                document.cookie = 'googtrans=/en/en; path=/; domain=' + host;
+                document.cookie = 'googtrans=/en/en; path=/; domain=.' + host;
+            } else {
+                document.cookie = 'googtrans=/en/' + lang + '; path=/';
+                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + host;
+                document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=.' + host;
+            }
+            window.location.reload();
+        }
+        function updateActiveLangBtn(lang) {
+            document.querySelectorAll('.lang-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            var btn = document.getElementById('btn-' + lang);
+            if (btn) btn.classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var match = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+            var lang = (match && match[1] !== 'en') ? match[1] : 'en';
+            updateActiveLangBtn(lang);
+        });
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
