@@ -805,6 +805,11 @@ h2 a:active {
     margin-bottom: 2rem;
 }
 
+.bio-photo {
+  width: 200px;   /* adjust */
+  height: auto;   /* keeps proportions */
+}
+
 .bio-content p {
     font-size: 1.0625rem;
     color: var(--text-light);
