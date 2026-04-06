@@ -806,7 +806,7 @@ h2 a:active {
 }
 
 .bio-photo {
-  width: 100px;   /* adjust */
+  width: 300px;   /* adjust */
   height: auto;   /* keeps proportions */
 }
 
